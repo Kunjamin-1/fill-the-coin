@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #ECEDF0;
+    font-family: "Kanit";
+}
+
+body,
+.container,
+.coin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    background-color: #404A65;
+
+}
+
+.container {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.heading h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    -webkit-text-stroke: 4px #35383f;
+    text-shadow: 5px 4px #35383f;
+}
+
+span {
+    text-transform: capitalize;
+}
+
+.instruction p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1.2rem 0;
+}
+
+.coin {
+    flex-direction: column;
+    gap: 2rem;
+    perspective: 1000px;
+
+}
+
+.heads,
+.tails {
+    cursor: pointer;
+}
+
+.display-none {
+    display: none;
+}
+
+.rotation {
+    animation: rotation 1.5s reverse;
+    transform-style: preserve-3d;
+    display: inline-block;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+.second-rotation{
+    animation: second-rotation 1.5s reverse;
+    transform-style: preserve-3d;
+    display: inline-block;
+}
+
+@keyframes second-rotation {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+.outcome {
+    height: 2.5rem;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin: 1.1rem 0;
+}
+
+.random-btn {
+    font-weight: 600;
+    font-size: 1.25rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 10rem;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    background-color: #1F6FB0;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:375px) {
+    .heading h1{
+        font-size: 3rem;
+    }
+    .instruction p {
+        font-size: 1rem;
+    }
+
+}
